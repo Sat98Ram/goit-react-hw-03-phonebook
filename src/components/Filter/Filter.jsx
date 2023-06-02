@@ -9,7 +9,7 @@ const Filter = ({ filter, onChange }) => {
         className={css.filterInput}
         type="text"
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         required
         value={filter}
         onChange={onChange}
