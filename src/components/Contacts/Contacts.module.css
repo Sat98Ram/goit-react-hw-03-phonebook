@@ -1,0 +1,25 @@
+.contactItem {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+}
+
+.contactItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.btnDelete {
+  margin-left: 8px;
+  cursor: pointer;
+  background: rgb(62, 197, 255);
+  border-radius: 4px;
+  border: none;
+  transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.btnDelete:hover,
+.btnDelete:focus {
+  background: rgb(62, 126, 255);
+}

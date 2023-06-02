@@ -1,0 +1,53 @@
+.formWrapper {
+  width: 100%;
+  border: 1px solid black;
+  padding: 12px 16px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputTitle {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.input {
+  border: 1px solid rgba(33, 33, 33, 0.8);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 16px;
+  padding: 8px 20px;
+  box-sizing: border-box;
+}
+
+.input:hover,
+.input:focus {
+  border-color: blue;
+  outline: transparent;
+}
+
+.btnSubmit {
+  font-family: inherit;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+  background: rgb(62, 197, 255);
+  border-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+  transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btnSubmit:hover,
+.btnSubmit:focus {
+  background: rgb(62, 126, 255);
+}
