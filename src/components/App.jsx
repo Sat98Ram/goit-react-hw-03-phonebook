@@ -4,11 +4,31 @@ import Section from './Sectiion/Section';
 import Contacts from './Contacts/Contacts';
 import Filter from './Filter/Filter';
 
+const LOCAL_STORAGE_CONTACTS_KEY = 'contacts';
+
 export class App extends Component {
   state = {
     contacts: [],
     filter: '',
   };
+
+  componentDidMount() {
+    const localContacts = JSON.parse(
+      localStorage.getItem(LOCAL_STORAGE_CONTACTS_KEY)
+    );
+    if (localContacts) {
+      this.setState({ contacts: localContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts.length !== this.state.contacts.length) {
+      localStorage.setItem(
+        LOCAL_STORAGE_CONTACTS_KEY,
+        JSON.stringify(this.state.contacts)
+      );
+    }
+  }
 
   addContact = data => {
     const { name, number } = data;
